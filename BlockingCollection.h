@@ -473,7 +473,7 @@ namespace code_machina {
             }
 
             bool try_take_i(value_type& item, std::true_type) {
-                item = container_.front();
+                item = std::move(container_.front());
                 container_.pop_front();
                 return true;
             }
