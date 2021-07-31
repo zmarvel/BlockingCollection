@@ -31,7 +31,7 @@ namespace code_machina {
 
     template <>
     struct ConditionVarTraits<std::condition_variable, std::mutex> {
-        static void initialize(std::condition_variable& cond_var) {
+        static void initialize(std::condition_variable&) {
         }
 
         static void signal(std::condition_variable& cond_var) {
